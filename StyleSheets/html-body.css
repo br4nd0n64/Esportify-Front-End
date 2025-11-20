@@ -1,0 +1,62 @@
+*{
+  margin: 0rem;
+  padding: 0rem;
+  
+  font-family: "Roboto";
+  font-size: 100%;
+  font-weight: 900;
+
+  text-shadow: 0px 4px 4px #000000;
+
+  color: #FFFFFF;
+
+  --carbon: #1B1B1B;
+  --red: #FF0000;
+
+  --fake-carbon-linear-gradient: linear-gradient(var(--carbon), var(--carbon));
+  --fake-red-linear-gradient: linear-gradient(var(--red),var(--red));
+
+  --e-sport-linear-gradient-90deg: linear-gradient(90deg, #00008B, #9932CC);
+  --e-sport-linear-gradient-180deg: linear-gradient(180deg, #00008B, #9932CC);
+}
+html, body{
+  max-width: 100%;
+  min-height: auto;
+
+  background-color: var(--carbon);
+}
+::-webkit-scrollbar{
+  width: 1rem;
+
+  border-radius: 20px;
+  
+  background-color: var(--carbon);
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 20px;
+
+  background: var(--e-sport-linear-gradient-180deg);
+}
+.fade-in {
+  animation-name: fade-in;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
