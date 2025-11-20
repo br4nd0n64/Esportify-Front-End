@@ -1,0 +1,818 @@
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  max-width: 100%;
+  min-height: auto;
+
+  background-color: var(--carbon);
+}
+br{
+  display: none;
+}
+.hero-title{
+  max-width: 50%;
+  min-height: auto;
+
+  text-align: center;
+
+  font-size: 6rem;
+
+  color: #FFFFFF;
+}
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 22rem;
+
+  background: var(--e-sport-linear-gradient-90deg);
+
+  filter: drop-shadow(0px 4px 4px black);
+}
+.hero-title, .banner{
+  margin-top: 25rem;
+}
+.banner-title{
+  max-width: 50%;
+  min-height: auto;
+
+  text-align: center;
+
+  font-size: 4rem;
+
+  color: #FFFFFF;
+}
+.infinite-scroll-carousel{
+  display: flex;
+
+  max-width: 100%;
+
+  margin-top: 6rem;
+
+  overflow: hidden;
+
+  filter: drop-shadow(0px 4px 4px black);
+
+  > * {
+    flex: 0 0 100%;
+  }
+
+  &:hover .group{
+    animation-play-state: paused;
+  }
+}
+.frame{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 24px;
+}
+.group{
+  display: flex;
+  gap: 3rem;
+
+  padding-right: 3rem;
+
+  will-change: transform;
+    animation: scrolling-animation 25s linear infinite;
+  }
+
+  @keyframes scrolling-animation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+.frame img{
+  max-width: 59.5rem;
+  min-height: auto;
+  
+  border-radius: 24px;
+}
+.infinite-scroll-carousel-caption{
+  max-width: 50%;
+  min-height: auto;
+
+  margin-top: 2rem;
+
+  text-align: center;
+
+  font-size: 1.5rem;
+
+  color: #FFFFFF;
+}
+.event-process-images-size{
+  width: 12rem;
+  height: 12rem;
+
+  margin-top: 3rem;
+
+  filter: drop-shadow(0px 4px 4px black);
+}
+.controller-image-caption, .trophy-image-caption, .awards-image-caption{
+  max-width: 50%;
+  min-height: auto;
+
+  margin-top: 2rem;
+
+  text-align: center;
+
+  font-size: 2rem;
+
+  color: #FFFFFF;
+}
+.upcoming-e-sport-events-box, .current-e-sport-events-box, .e-sport-events-box{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 5rem;
+
+  --column-gap-var: 5rem;
+  --e-sport-event-label-width-var: 29rem;
+
+  max-width: calc(var(--e-sport-event-label-width-var) * 3 + (var(--column-gap-var) * 2));
+
+  margin-top: 5rem;
+
+  border: 10px solid transparent;
+  border-radius: 20px;
+
+  background: var(--fake-carbon-linear-gradient) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+
+  filter: drop-shadow(0px 4px 4px black);
+}
+.e-sport-event-label{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 29rem;
+  height: 26rem;
+
+  border: 10px solid var(--carbon);
+  border-radius: 20px;
+
+  background: var(--e-sport-linear-gradient-90deg);
+
+  filter: drop-shadow(0px 4px 4px black);
+  
+  box-shadow: none;
+
+  cursor: pointer;
+}
+.e-sport-event-label:hover{
+  border: 10px solid #FFFFFF;
+
+  box-shadow: 0px 0px 50px #FFFFFF;
+}
+.e-sport-event-label:hover, .e-sport-event-label:not(:hover){
+  transition-delay: 0ms;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: ease-in;
+}
+.e-sport-event-label img{
+  width: 24rem;
+  height: 12rem;
+
+  margin-top: 16px;
+
+  border-radius: 10px;
+}
+.event-players-number-in{
+  margin-top: 3rem;
+  margin-bottom: 0rem;
+}
+.event-name, .event-players-number-in, .event-start-time, .event-end-time{
+  min-height: auto;
+
+  text-align: center;
+
+  font-size: 1.5rem;
+}
+.sort-by-text{
+  font-size: 1.5rem;
+
+  margin-top: 3rem;
+
+  color: #FFFFFF;
+}
+.sort-buttons-group{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  width: 100%;
+  min-height: 4rem;
+
+  margin-top: 2rem;
+}
+.sort-buttons-group button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  width: 19rem;
+  height: 4rem;
+
+  border: 5px solid transparent;
+  border-radius: 25px;
+
+  background: var(--fake-carbon-linear-gradient) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+
+  filter: drop-shadow(0px 4px 4px black);
+}
+.sort-buttons-group button span{
+
+  font-size: 1.5rem;
+
+  background: none;
+
+}
+.sort-buttons-group button span:hover, .sort-buttons-group button span:not(:hover){
+  transition-delay: 0ms;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: ease-in;
+}
+.mini-button:hover{
+  background: var(--e-sport-linear-gradient-90deg) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+}
+.mini-button:not(:hover){
+  background: var(--fake-carbon-linear-gradient) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+}
+.send-error-text{
+  display: none;
+
+  margin-top: 1rem;
+
+  font-size: 1rem;
+  text-align: center;
+
+  color: red;
+}
+.contact-form-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 62rem;
+  width: 62rem;
+
+  min-height: auto;
+
+  margin-top: 3rem;
+
+  border: 10px solid transparent;
+  border-radius: 25px;
+
+  background: var(--fake-carbon-linear-gradient) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+}
+.name-field, .first-name-field, .e-mail-field, .object-field{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 36rem;
+  height: 4rem;
+
+  border: 5px solid transparent;
+  border-radius: 25px;
+
+  background: var(--fake-carbon-linear-gradient) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+  
+  filter: drop-shadow(0px 4px 4px black);
+}
+.name-field{
+  margin-top: 5rem;
+}
+.first-name-field, .e-mail-field, .object-field{
+  margin-top: 2rem;
+}
+.name-field input, .first-name-field input, .e-mail-field input, .object-field input{
+  display: flex;
+
+  border: none;
+  outline: none;
+
+  width: 34rem;
+
+  margin-left: 1rem;
+
+  font-size: 1.5rem;
+
+  background: transparent;
+  color: #FFFFFF;
+}
+.name-field input::placeholder, .first-name-field input::placeholder, .e-mail-field input::placeholder, .object-field input::placeholder{
+  font-size: 1.5rem;
+
+  color: #FFFFFF;
+}
+.message-field{
+  display: flex;
+
+  width: 55rem;
+  height: 16rem;
+
+  margin-top: 2rem;
+
+  border: 5px solid transparent;
+  border-radius: 25px;
+
+  background: var(--fake-carbon-linear-gradient) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+
+  filter: drop-shadow(0px 4px 4px black);
+}
+.message-field textarea{
+  border: none;
+  outline: none;
+
+  width: 54rem;
+  height: 15rem;
+
+  margin-left: 1rem;
+
+  font-size: 1.5rem;
+
+  background: transparent;
+  color: #FFFFFF;
+
+  resize: none;
+}
+.message-field textarea::placeholder{
+  font-size: 1.5rem;
+
+  color: #FFFFFF;
+}
+.send-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  width: 19rem;
+  height: 4rem;
+
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  border: 5px solid transparent;
+  border-radius: 25px;
+
+  background: var(--fake-carbon-linear-gradient) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+
+  filter: drop-shadow(0px 4px 4px black);
+}
+.send-button p{
+  font-size: 1.5rem;
+
+  background: none;
+}
+.send-button p:hover, .send-button p:not(:hover){
+  transition-delay: 0ms;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: ease-in;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form img{
+  width: 2rem;
+  height: 2rem;
+}
+.username-field, .password-field, .password-check-field{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 36rem;
+  height: 4rem;
+
+  border: 5px solid transparent;
+  border-radius: 25px;
+
+  background: linear-gradient(var(--carbon), var(--carbon)) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+
+  filter: drop-shadow(0px 4px 4px black);
+}
+.username-field{
+  margin-top: 5rem;
+}
+.password-field, .password-check-field{
+  margin-top: 2rem;
+}
+.username-field img, .password-field img:nth-of-type(1){
+  margin-left: 2rem;
+
+  filter: drop-shadow(0px 4px 4px black);
+}
+.username-field input, .password-field input, .password-check-field input{
+  display: flex;
+
+  border: none;
+  outline: none;
+
+  width: 25rem;
+
+  margin-left: 1rem;
+  
+  font-size: 1.5rem;
+
+  background-color: var(--carbon);
+  color: #FFFFFF;
+}
+.password-field img:nth-of-type(2){
+  margin-left: 2rem;
+
+  filter: drop-shadow(0px 4px 4px black);
+
+  cursor: pointer;
+}
+.username-field input::placeholder, .password-field input::placeholder, .password-check-field input::placeholder{
+  font-size: 1.5rem;
+
+  color: #FFFFFF;
+}
+.login-button, .create-an-account-button, .password-reset-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  width: 17rem;
+  height: 4rem;
+
+  border: 5px solid transparent;
+  border-radius: 25px;
+
+  background: var(--fake-carbon-linear-gradient) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+
+  filter: drop-shadow(0px 4px 4px black);
+}
+.login-button, .password-reset-button{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.create-an-account-button{
+  margin-top: 1rem;
+}
+.login-button span, .create-an-account-button span, .password-reset-button span{
+  font-size: 1.5rem;
+
+  background: none;
+}
+.login-error-text{
+  display: none;
+
+  margin-top: 3rem;
+
+  font-size: 1.5rem;
+
+  text-align: center;
+
+  color: red;
+}
+.forgotten-password{
+  min-height: auto;
+
+  font-size: 1.5rem;
+  
+  text-decoration: transparent;
+}
+.forgotten-password:hover{
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+
+  transition: text-decoration 1s;
+}
+.forgotten-password:not(:hover){
+  text-decoration: none;
+  text-decoration-color: transparent;
+}
+.no-esportify-account-text{
+  margin-top: 6rem;
+
+  text-align: center;
+
+  font-size: 1.5rem;
+}
+.sign-up-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  width: 17rem;
+  height: 4rem;
+
+  margin-top: 3rem;
+
+  border: 5px solid transparent;
+  border-radius: 25px;
+
+  background: var(--fake-carbon-linear-gradient) padding-box, var(--e-sport-linear-gradient-90deg) border-box;
+
+  filter: drop-shadow(0px 4px 4px black);
+}
+.sign-up-button span{
+  font-size: 1.5rem;
+
+  background: none;
+
+}
+@media screen and (max-width: 1600px){
+  .upcoming-e-sport-events-box, .current-e-sport-events-box, .e-sport-events-box{
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 0px;
+    row-gap: 80px;
+
+    --row-gap-var: 80px;
+
+    max-width: 29rem;
+  }
+}
+@media screen and (max-width: 1550px){
+  .hero-title{
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 1050px){
+  .hero-title{
+    font-size: 6rem;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1000px){
+  .sort-buttons-group{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 960px){
+  .frame img{
+    max-width: 50rem;
+  }
+}
+@media screen and (max-width: 925px){
+  .message-field{
+    width: 50rem;
+    height: 16rem;
+  }
+  .message-field textarea{
+    width: 49rem;
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 850px){
+  .banner-title{
+    font-size: 2.5rem;
+  }
+  .message-field{
+    width: 45rem;
+    height: 16rem;
+  }
+  .message-field textarea{
+    width: 44rem;
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 800px){
+  .frame img{
+    max-width: 40rem;
+  }
+}
+@media screen and (max-width: 750px){
+  .message-field{
+    width: 40rem;
+    height: 16rem;
+  }
+  .message-field textarea{
+    width: 39rem;
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 675px){
+  .message-field{
+    width: 35rem;
+    height: 16rem;
+  }
+  .message-field textarea{
+    width: 34rem;
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 650px){
+  .name-field, .first-name-field, .e-mail-field, .object-field, .username-field, .password-field, .password-check-field{
+    width: 31rem;
+  }
+  .name-field input, .first-name-field input, .e-mail-field input, .object-field input{
+    width: 29rem;
+  }
+}
+@media screen and (max-width: 625px){
+  .username-field, .password-field, .password-check-field{
+    width: 31rem;
+  }
+  .username-field input, .password-field input, .password-check-field input{
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 600px){
+  .message-field{
+    width: 30rem;
+    height: 16rem;
+  }
+  .message-field textarea{
+    width: 29rem;
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 550px){
+  .hero-title{
+    font-size: 5rem;
+  }
+  .banner-title{
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 525px){
+  .e-sport-event-label{
+    width: 27rem;
+    height: 24rem;
+  }
+  .e-sport-event-label img{
+    width: 22rem;
+    height: 11rem;
+  }
+  .event-name, .event-players-number-in, .event-start-time, .event-end-time{
+    font-size: 1.35rem;
+  }
+  .event-players-number-in{
+    margin-top: 2.906rem;
+  }
+  .name-field, .first-name-field, .e-mail-field, .object-field{
+    width: 26rem;
+    height: 4rem;
+  }
+  .name-field input, .first-name-field input, .e-mail-field input, .object-field input{
+    width: 24rem;
+  }
+  .message-field{
+    width: 25rem;
+    height: 16rem;
+  }
+  .message-field textarea{
+    width: 24rem;
+    height: 15rem;
+  }
+  .username-field, .password-field, .password-check-field{
+    width: 26rem;
+    height: 4rem;
+  }
+  .username-field input, .password-field input, .password-check-field input{
+    width: 15rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .infinite-scroll-carousel-caption{
+  font-size: 1rem;
+  max-width: 100%;
+  }
+  .event-process-images-size{
+    width: 10rem;
+    height: 10rem;
+  }
+  .controller-image-caption, .trophy-image-caption, .awards-image-caption{
+    max-width: 100%;
+    font-size: 1.5rem;
+  }
+  main p br{
+    display: initial;
+  }
+}
+@media screen and (max-width: 475px){
+  .e-sport-event-label{
+    width: 25rem;
+    height: 22rem;
+  }
+  .e-sport-event-label img{
+    width: 20rem;
+    height: 10rem;
+  }
+  .event-name, .event-players-number-in, .event-start-time, .event-end-time{
+    font-size: 1.2rem;
+  }
+  .event-players-number-in{
+    margin-top: 2.813rem;
+  }
+}
+@media screen and (max-width: 450px){
+  .hero-title{
+    font-size: 4rem;
+  }
+  .banner-title{
+    max-width: 100%;
+  }
+  .frame img{
+    max-width: 35rem;
+  }
+  .e-sport-event-label{
+    width: 23rem;
+    height: 20rem;
+  }
+  .e-sport-event-label img{
+    width: 18rem;
+    height: 9rem;
+  }
+  .event-name, .event-players-number-in, .event-start-time, .event-end-time{
+    font-size: 1.05rem;
+  }
+  .event-players-number-in{
+    margin-top: 2.719rem;
+  }
+  .name-field, .first-name-field, .e-mail-field, .object-field{
+    width: 21rem;
+    height: 4rem;
+  }
+  .name-field input, .first-name-field input, .e-mail-field input, .object-field input{
+    width: 19rem;
+  }
+  .message-field{
+    width: 20rem;
+    height: 16rem;
+  }
+  .message-field textarea{
+    width: 19rem;
+    height: 15rem;
+  }
+  .username-field, .password-field, .password-check-field{
+    width: 21rem;
+    min-height: 4rem;
+  }
+  .username-field input{
+    width: 15rem;
+  }
+  .password-field input, .password-check-field input{
+    width: 10rem;
+  }
+  main form span br{
+    display: initial;
+  }
+}
+@media screen and (max-width: 405px){
+  .e-sport-event-label{
+    width: 21rem;
+    height: 18rem;
+  }
+  .e-sport-event-label img{
+    width: 16rem;
+    height: 8rem;
+  }
+  .event-name, .event-players-number-in, .event-start-time, .event-end-time{
+    font-size: 0.9rem;
+  }
+  .event-players-number-in{
+    margin-top: 2.625rem;
+  }
+}
+@media screen and (max-width: 375px){
+  .hero-title{
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 325px){
+  .event-process-images-size{
+    width: 8rem;
+    height: 8rem;
+  }
+}
+@media screen and (max-width: 275px){
+  .hero-title{
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 225px){
+  .banner-title{
+    font-size: 1.75rem;
+  }
+}
