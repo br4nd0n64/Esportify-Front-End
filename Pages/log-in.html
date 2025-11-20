@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Encodage des caractères en UTF-8 -->
+	<meta charset="utf-8">
+	<!-- Déclaration de la zone visible par l'utilisateur en fonction de la taille de l'appareil -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="view-transition" content="same-origin"> 
+	<!-- Importation des feuilles de style CSS -->
+	<link rel="stylesheet" href="../StyleSheets/html-body.css"/>
+	<link rel="stylesheet" href="../StyleSheets/header.css"/>
+	<link rel="stylesheet" href="../StyleSheets/main.css"/>
+	<link rel="stylesheet" href="../StyleSheets/footer.css"/>
+	<!-- Importation de la police Roboto via le serveur de Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="fade-in">
+	<header>
+		<img src="../assets/Esportify.png" alt="Error While Loading" width="304" height="auto"/>
+		<img src="../assets/Drop-Down_Menu.png" alt="Error While Loading" width="24" height="24"/>
+		<nav>
+			<ul>
+				<li><a href="home.html">Accueil</a></li>
+				<li><a href="e-sport-events.html">Événements E-Sport</a></li>
+				<li><a href="contact-us.html">Contactez-Nous</a></li>
+				<li><a class="login" href="log-in.html">Connexion</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="banner">
+			<span class="banner-title">SE CONNECTER À ESPORTIFY</span>
+		</div>
+
+		<form onsubmit="return isValidLoginForm()" novalidate>
+			<div class="username-field">
+				<img src="../Assets/User.png" alt="Error While Loading"></img>
+				<input type="text" class="input-field" placeholder="Nom d'utilisateur" required/>
+			</div>
+
+			<div class="password-field">
+				<img id="lock" src="../Assets/Lock.png" alt="Error While Loading"></img>
+				<input type="password" class="input-field" placeholder="Mot de passe" required/>
+				<img id="eye" src="../Assets/Close_Eye.png" alt="Error While Loading"></img>
+			</div>
+
+			<button type="submit" class="login-button mini-button ">
+				<span>Connexion</span>
+			</button>
+			<a class="forgotten-password" href="password-reset.html">Mot de passe oublié ?</a>
+		</form>
+
+		<form action="create_an_account.html">
+			<span class="no-esportify-account-text" href="password-reset.html">Vous n'avez pas <br>de compte Esportify ?</span>
+			<button class="create-an-account-button mini-button ">
+				<span>Créer un compte</span>
+			</button>
+		</form>
+
+		<p class="login-error-text">Échec de connexion. <br>Vérifiez vos identifiants</p>
+	</main>
+	<footer>
+		<p class="copyright">Copyright © 2025 Esportify. Tous droits réservés</p>
+		<a class="privacy-policy" href="privacy-politicy.html">Politique de confidentialité</a>
+	</footer>
+	
+	<script src="../Scripts/JavaScript/drop-down-menu-event.js"></script>
+	<script src="../Scripts/JavaScript/check-user-inputs.js"></script>
+	<script src="../Scripts/JavaScript/eye-event.js"></script>
+</body>
+</html>
