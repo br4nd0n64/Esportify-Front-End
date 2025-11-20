@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!-- Encodage des caractères en UTF-8 -->
+	<meta charset="utf-8">
+	<!-- Déclaration de la zone visible par l'utilisateur en fonction de la taille de l'appareil -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="view-transition" content="same-origin"> 
+	<!-- Importation des feuilles de style CSS -->
+	<link rel="stylesheet" href="../StyleSheets/html-body.css"/>
+	<link rel="stylesheet" href="../StyleSheets/header.css"/>
+	<link rel="stylesheet" href="../StyleSheets/main.css"/>
+	<link rel="stylesheet" href="../StyleSheets/footer.css"/>
+	<!-- Importation de la police Roboto via le serveur de Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="fade-in">
+	<header>
+		<img src="../assets/Esportify.png" alt="Error While Loading" width="304" height="auto"/>
+		<img src="../assets/Drop-Down_Menu.png" alt="Error While Loading" width="24" height="24"/>
+		<nav>
+			<ul>
+				<li><a href="home.html">Accueil</a></li>
+				<li><a href="e-sport-events.html">Événements E-Sport</a></li>
+				<li><a href="contact-us.html">Contactez-Nous</a></li>
+				<li><a class="login" href="log-in.html">Connexion</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="banner">
+			<span class="banner-title">SUPPORT TECHNIQUE</span>
+		</div>
+
+		<form onsubmit="return isValidContactForm()" novalidate>
+			<div class="name-field">
+				<input type="text" class="input-field" placeholder="Nom" required>
+			</div>
+
+			<p id="name-field" class="send-error-text">Le nom n'est pas spécifié.</p>
+
+			<div class="first-name-field">
+				<input type="text" class="input-field" placeholder="Prénom" required>
+			</div>
+
+			<p id="first-name-field" class="send-error-text">Le prénom n'est pas spécifié.</p>
+
+			<div class="e-mail-field">
+				<input type="text" class="input-field" placeholder="E-mail" required>
+			</div>
+
+			<p id="e-mail-field" class="send-error-text">L'e-mail n'est pas spécifié ou est dans un format incorrect.</p>
+
+			<div class="object-field">
+				<input type="text" class="input-field" placeholder="Objet" required>
+			</div>
+
+			<p id="object-field" class="send-error-text">L'objet n'est pas spécifié.</p>
+
+			<div class="message-field">
+				<textarea class="input-field" placeholder="Message" minlength="50"></textarea>
+			</div>
+
+			<p id="message-field" class="send-error-text">Le message doit contenir un minimum de 50 caractères.</p>
+
+			<button type="submit" class="mini-button send-button"><p>Envoyer le message</p></button>
+		</form>
+	</main>
+	<footer>
+		<p class="copyright">Copyright © 2025 Esportify. Tous droits réservés</p>
+		<a class="privacy-policy" href="privacy-politicy.html">Politique de confidentialité</a>
+	</footer>
+
+	<script src="../Scripts/JavaScript/drop-down-menu-event.js"></script>
+  <script src="../Scripts/JavaScript/check-user-inputs.js"></script>
+</body>
+</html>
