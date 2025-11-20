@@ -1,0 +1,42 @@
+-- CREATION DE LA TABLE DES UTILISATEURS ESPORTIFY
+CREATE TABLE IF NOT EXISTS Users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(25) NOT NULL UNIQUE,
+  email VARCHAR(50) NOT NULL UNIQUE CHECK (email ~* "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,63}$"),
+  password VARCHAR(25) NOT NULL,
+  role VARCHAR(15) DEFAULT "Guest",
+  score INT DEFAULT 0,
+  creationDate TIMESTAMP DEFAULT NOW(),
+  updateDate TIMESTAMP DEFAULT NOW()
+);
+
+-- CREATION DE LA TABLE DES ÉVÉNEMENTS E-SPORT SUR ESPORTIFY
+CREATE TABLE IF NOT EXISTS ESportEvents (
+  id SERIAL PRIMARY KEY,
+  userId INT REFERENCES users(id),
+  title VARCHAR(75) NOT NULL,
+  description VARCHAR(250) NOT NULL,
+  playersCount INT CHECK (playersCount > 1),
+  startDateTime TIMESTAMP NOT NULL,
+  endDateTime TIMESTAMP NOT NULL,
+  creationDate TIMESTAMP DEFAULT NOW(),
+  updateDate TIMESTAMP DEFAULT NOW()
+  isApproved BOOLEAN DEFAULT FALSE,
+);
+
+-- CREATION DE LA TABLE DES IMAGES DES ÉVÉNEMENTS E-SPORT SUR ESPORTIFY
+CREATE TABLE IF NOT EXISTS ESportEventsImages (
+  id SERIAL PRIMARY KEY,
+  eventId INT REFERENCES events(id) ON DELETE CASCADE,
+  imageSource VARCHAR(255) NOT NULL CHECK (imageSrc ~* '^(https?:\/\/)[\w\-]+(\.[\w\-]+)+[/#?]?.*$'), -- On vérifie si l'URL HTTPS de l'image qu'on souhaite importer est valide ou non.
+  creationDate TIMESTAMP DEFAULT NOW()
+);
+
+-- CREATION DE LA TABLE DES ÉVÉNEMENTS E-SPORT FAVORIS DES UTILISATEURS ESPORTIFY
+CREATE TABLE IF NOT EXISTS FavoriteESportEvents (
+  id SERIAL PRIMARY KEY,
+  userId INT REFERENCES users(id) ON DELETE CASCADE,
+  eventId INT REFERENCES events(id) ON DELETE CASCADE,
+  creationDate TIMESTAMP DEFAULT NOW(),
+  UNIQUE(userId, eventId)
+);
